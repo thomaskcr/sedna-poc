@@ -1,0 +1,180 @@
+.sidenav .app-brand {
+  height: 66px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+tr.border-bottom td {
+  border-bottom: 2pt solid #000000;
+}
+
+.navbar-brand {
+  margin: auto;
+}
+
+.app-brand-text {
+  font-size: 18px;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #E01A76;
+}
+
+
+.btn-sedna, .btn-sedna:hover, .btn-sedna:focus, .btn-sedna:active, .btn-sedna.active, .open>.dropdown-toggle.btn-sedna {
+  color: #fff;
+  background-color: #b67520;
+  border-color: #b67520; /*set the color you want here*/
+}
+
+.sedna-menu-bar {
+  color: #F5F5F5FF
+}
+
+body {
+  background-color: #ffffff
+}
+
+
+.authentication-wrapper {
+  justify-content: center;
+  display: flex;
+}
+
+.authentication-inner {
+  max-width: 380px;
+  width: 100%;
+}
+
+//YellowBasket Additions //
+
+/* Buttons */
+.link-btn {
+    border: none;
+    background-color: transparent;
+}
+
+.link-btn:hover {
+    opacity: 80%;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-outline-secondary {
+    color: #848891;
+}
+
+.btn-outline-secondary:hover {
+    color: white;
+}
+
+// End of Buttons //
+
+//Project Overview Table Navigation //
+.nav {
+    border-bottom: solid .5px grey;
+}
+
+.nav-tabs .nav-link {
+    border-color: grey;
+    margin-right: 10px;
+    color: rgb(77, 77, 77);
+}
+
+.nav-link.active {
+    border-color: grey !important;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    border-color: rgb(149, 149, 149) !important;
+    border-bottom: none;
+}
+
+.nav-link {
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+}
+
+.nav-items {
+    border: 1px solid grey;
+}
+
+/* End of Project Overview Table Nav Styles */
+
+/* Start of Project Overview Table Styles */
+
+/* Custom table row colors */
+.table-striped tbody tr:nth-child(odd) {
+    background-color: white;
+    /* Set the background color for odd rows to white */
+}
+
+.table-striped tbody tr:nth-child(even) {
+    background-color: rgb(243, 243, 243);
+    /* Set the background color for even rows to light gray */
+}
+
+/* Start of Modal Styles on Opportunity page*/
+
+.card-shadow {
+  border-radius: 8px;
+  background-color: white;
+  filter: drop-shadow(2px 3px 8px rgb(191, 191, 191));
+  padding: 10px;
+}
+
+// Scrolling Effects
+
+.scroll-nobar::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-nobar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  overflow: hidden;
+  overflow: auto;
+}
+
+//  
+
+// Modals
+
+.modal {
+  overflow: auto;
+}
+
+#upload-project-details label {
+  font-weight: 650;
+}
+#upload-project-spreadsheet:hover {
+  background-color: #E2E6EA!important;
+}
+
+  // Styling for Table Overlay Buttons
+
+  .table thead th {
+    border-bottom: none !important;
+  }
+
+  #table-sample .column-8,
+  #table-sample .column-9,
+  #table-sample .column-10,
+  #table-sample .column-11,
+  #table-sample .column-12 {
+    background-color: rgba(0, 0, 0, 0.10);
+    color: grey;
+  }
+
+  .hovered {
+    background-color: transparent!important;
+    color: black!important;
+  }
+  
