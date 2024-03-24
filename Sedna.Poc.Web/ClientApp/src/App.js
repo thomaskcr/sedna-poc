@@ -16,13 +16,14 @@ import './app.scss';
 
 import 'bootstrap/dist/js/bootstrap.js';
 
-import { Login } from "./pages/Login";
+import LoginForm from "./pages/LoginPage";
 
 import { Auth, Hub } from 'aws-amplify';
 import { amplifyConfig } from "./utils/amplifyConfig";
 import {NotFound} from "./pages/NotFound";
 import {ListUsers} from "./components/users/ListUsers";
 import userStore from "./store/userStore";
+import WelcomePage from './pages/WelcomePage';
 
 Auth.configure(amplifyConfig);
 
@@ -30,9 +31,12 @@ function App() {
     const setUser = userStore(state => state.setUser)
     const [customState, setCustomState] = useState(null);
     const clearUser = userStore(state => state.clearUser);
-    const [activeSession, setActiveSession] = useState(false);
+    //const [activeSession, setActiveSession] = useState(false);
 
+
+    /*
     useEffect(() => {
+        
         const unsubscribe = Hub.listen("auth", ({ payload: { event, data } }) => {
             switch (event) {
                 case "signIn":
@@ -55,9 +59,12 @@ function App() {
         });
 
         return unsubscribe;
+        
     }, []);
+    */
 
-
+    const activeSession = userStore(state => state.signedIn);
+    
     return (
         <LayoutBase>
             <Routes>
@@ -65,6 +72,7 @@ function App() {
                     <>
                         <Route element={<PrivateRoutes />}>
                             <Route path="/" element={<Navigate to="/users" />} />
+                            <Route element={<WelcomePage />} path="/welcome" />
                             <Route element={<LayoutApp />}>
                                 <Route element={<ListUsers />} path="/users" />
                                 <Route element={<NotFound />} path="/not-found" />
@@ -72,7 +80,9 @@ function App() {
                         </Route>
                     </> : <>
                         <Route element={<LayoutMinimal />}>
-                            <Route element={<Login />} path="/" />
+                            <Route element={<LoginForm />} path="/" />
+                            <Route element={<NotFound />} path="/not-found" />
+                            <Route element={<LoginForm />} path="/login" />
                         </Route>
                     </>
                 }
